@@ -33,7 +33,7 @@ jobs:
           echo "Maven version:"
           mvn -version
       - name: Execute tests
-        run: mvn clean verify, mvn clean install -X
+        run: mvn clean verify
 
       - name: Test Report Generation
         uses: actions/upload-artifact@v4
