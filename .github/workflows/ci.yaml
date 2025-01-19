@@ -33,11 +33,10 @@ jobs:
         run: mvn clean test
 
       - name: Test Report Generation
-        uses: dorny/test-reporter@v1
+        uses: actions/upload-artifact@v4
         if: success() || failure()
         with:
-            name: JUnit Report
+            name: TestNG Report
             path: reports/report_*.html
-            reporter: java-junit
             fail-on-error: true
 
