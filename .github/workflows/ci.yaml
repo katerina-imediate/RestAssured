@@ -37,14 +37,10 @@ jobs:
           echo "Maven version:"
           mvn -version
       - name: Execute tests
-        run: mvn clean test
+        run: mvn clean verify
 
-      - name: Archive logs
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: logs
-          path: logs
+
+
 
       - name: Test Report Generation
         uses: actions/upload-artifact@v4
