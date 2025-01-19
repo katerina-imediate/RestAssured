@@ -37,6 +37,6 @@ jobs:
         if: success() || failure()
         with:
             name: TestNG Report
-            path: reports/report_*.html
-            fail-on-error: true
+            path: target/surefire-reports/
+
 
