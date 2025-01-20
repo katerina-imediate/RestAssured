@@ -9,21 +9,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.SuiteRunState;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.Map;
 
 public class UITests {
 
-    private static final Logger log = LoggerFactory.getLogger(UITests.class);
-    private Map<String, String> user;
-    private WebDriver driver;
+    private final Logger log = LoggerFactory.getLogger(UITests.class);
+    private static Map<String, String> user;
+    private static WebDriver driver;
 
-    @BeforeClass
-    public void setup() {
+    @BeforeTest
+    public static void setup() {
         user = Factory.getRandomUser();
 
         driver = new ChromeDriver();
@@ -58,12 +57,10 @@ public class UITests {
 
         AddUser addUserPage = new AddUser(driver);
         addUserPage.addInvalidUser();
-//        ContactList contactListPage = new ContactList(driver);
-//        contactListPage.assertIsLoaded();
 
         addUserPage.errorUser();
     }
-//User validation failed: email: Email is invalid
+
     @AfterClass
     public void tearDown() {
         driver.quit();

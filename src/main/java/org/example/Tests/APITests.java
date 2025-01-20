@@ -32,9 +32,9 @@ public class APITests {
 
         response.then().assertThat().statusCode(200);
 
-        String token = response.jsonPath().get("_");
+        String token = response.jsonPath().get("token");
 
-        user.put("_", token);
+        user.put("token", token);
 
     }
 
