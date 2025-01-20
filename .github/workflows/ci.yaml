@@ -33,14 +33,12 @@ jobs:
         run: mvn clean test
 
       - name: Test
-        run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
+        run: mvn clean test -DsuiteXmlFile=/org/example/testng.xml
 
-      - name: Report
-        uses: actions/setup-java@v4
-        if: always()
-        with:
-            name: TestNG Tests
-            path: testng.xml
+
+#      - name: Run tests
+#        uses: actions/setup-java@v4
+
 
 
 
