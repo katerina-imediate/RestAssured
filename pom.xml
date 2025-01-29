@@ -19,7 +19,7 @@
 <!--        <allure.maven.version>2.12.0</allure.maven.version>-->
 <!--        <allure.testng.version>2.25.0</allure.testng.version>-->
         <SuiteFiles>
-            testng.xml
+               <suite-file path="testng.xml"/>
         </SuiteFiles>
 
        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
