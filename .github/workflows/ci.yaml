@@ -32,8 +32,8 @@ jobs:
       - name: Execute tests
         run: mvn clean test
 
-      - name: Test
-        run: mvn clean test -DsuiteXmlFile=/org/example/testng.xml
+      # - name: Test
+      #   run: mvn clean test -DsuiteXmlFile=/org/example/testng.xml
 
 
 #      - name: Run tests
