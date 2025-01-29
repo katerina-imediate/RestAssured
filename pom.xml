@@ -18,9 +18,6 @@
 <!--        <maven.surefire.plugin.version>3.2.3</maven.surefire.plugin.version>-->
 <!--        <allure.maven.version>2.12.0</allure.maven.version>-->
 <!--        <allure.testng.version>2.25.0</allure.testng.version>-->
-        <SuiteFiles>
-               <suite-file path="testng.xml"/>
-        </SuiteFiles>
 
        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
